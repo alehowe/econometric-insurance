@@ -22,7 +22,7 @@ df_daily <- df %>%
   filter(timestamp >= start & 
            timestamp <= end)
 
-ggplot(df_daily, aes(x = timestamp, y = )) +
+ggplot(df_daily, aes(x = timestamp, y = close)) +
   geom_line(color = "blue", size = 1) +
   geom_point(color = "red", size = 2) + # points
   labs(title = paste("Time Series Plot", day, sep = " : "),
